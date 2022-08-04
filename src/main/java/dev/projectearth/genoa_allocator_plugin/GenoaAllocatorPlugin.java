@@ -183,24 +183,7 @@ public class GenoaAllocatorPlugin implements PluginContainer {
         File buildplateFile = new File(this.server.getFilePath() + "/worlds/" + buildplateId.toString() + ".json");
         if (buildplateFile.exists()) return;
 
-        ServerBuildplateRequest req = new ServerBuildplateRequest();
-        req.setBuildplateId(buildplateId);
-        req.setPlayerId(playerId);
-
-        try {
-
-        String request = OBJECT_MAPPER.writeValueAsString(req);
-        String buildplate = GenoaUtils.SendApiCommand(GenoaServerCommand.GetBuildplate, null, request);
-        buildplateFile.createNewFile();
-
-        FileWriter fileWriter = new FileWriter(this.server.getFilePath() + "/worlds/" + buildplateId.toString() + ".json");
-        fileWriter.write(buildplate);
-        fileWriter.close();
-
-        } catch (IOException e) {
-            this.logger.error("An error occured while downloading the buildplate!");
-            e.printStackTrace();
-        }
+        //i removed this code as it was making my api freeze.
     }
 
     @Listener
