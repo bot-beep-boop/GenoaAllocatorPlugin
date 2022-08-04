@@ -13,3 +13,17 @@ using maven, `mvn clean install` in project root.
 use as a plugin with our fork of Cloudburst. 
 
 **Important: your built jar should be renamed to ZGenoaAllocatorPlugin to fix loading issues that cause crashes**
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
