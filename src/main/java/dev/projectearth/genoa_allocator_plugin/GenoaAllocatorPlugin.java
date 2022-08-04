@@ -172,7 +172,8 @@ public class GenoaAllocatorPlugin implements PluginContainer {
 
         try {
             String request = OBJECT_MAPPER.writeValueAsString(info);
-            GenoaUtils.SendApiCommand(GenoaServerCommand.MarkServerAsReady, null, request);
+            //GenoaUtils.SendApiCommand(GenoaServerCommand.MarkServerAsReady, null, request);
+            //time to stfu api stop freezing please ;-;
         } catch (Exception e) {
             this.logger.error("Something went wrong while trying to mark the server as ready.");
             e.printStackTrace();
